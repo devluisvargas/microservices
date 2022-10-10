@@ -26,11 +26,11 @@ public class UserService {
 
     private final CarFeignClient carFeignClient;
     public List<Car> getCars(Long id){
-        return restTemplate.getForObject("http://localhost:8082/cars/user/"+id, List.class);
+        return restTemplate.getForObject("http://car-service/cars/user/"+id, List.class);
     }
 
     public List<Motorcycle> getMotorcycles(Long id){
-        return restTemplate.getForObject("http://localhost:8083/motorcycles/user/"+id, List.class);
+        return restTemplate.getForObject("http://motorcycle-service/motorcycles/user/"+id, List.class);
     }
 
     public List<User> getAll() {
